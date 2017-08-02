@@ -57,7 +57,11 @@
 \newcommand*{\TableFont}{\fontsize{8}{9}\sffamily}
 \BeforeBeginEnvironment{tabular}{\begin{center}\TableFont}
 \AfterEndEnvironment{tabular}{\end{center}}
-\BeforeBeginEnvironment{longtable}{\TableFont}
+%\BeforeBeginEnvironment{longtable}{\TableFont}
+
+% In case the default table options are needed somewhere, mytab env can be used
+\let\mytab\tabular
+\let\endmytab\endtabular
 
 % Title/Author fonts
 \newcommand*{\TitleFont}{\fontsize{24}{28}\sffamily}
