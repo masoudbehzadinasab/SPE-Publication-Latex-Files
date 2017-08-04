@@ -84,3 +84,15 @@
 % Equation indentation
 \usepackage{amsmath}
 \setlength{\mathindent}{0.5cm}
+
+% Cross-references will be easier this way:
+\usepackage{xparse}
+\NewDocumentCommand \eref{ m }{%
+    Eq.~\ref{eqn:#1}%
+}
+\NewDocumentCommand \fref{ m }{%
+    \textbf{Fig.~\ref{fig:#1}}%
+}
+\NewDocumentCommand \tref{ m }{%
+    \textbf{Table~\ref{tab:#1}}%
+}
